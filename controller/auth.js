@@ -12,7 +12,7 @@ const sendToken = (user, res, statusCode) => {
   user.password = undefined;
   res.status(statusCode).json({
     success: true,
-    token: `Bearer ${token}`
+    token: token
   });
 };
 
@@ -68,7 +68,7 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
 
   req.user = currentUser;
-  
+
   next();
 });
 

@@ -19,7 +19,13 @@
 
     <template>
       <h5 class="grey--text text-center">Upload profile image</h5>
-      <v-file-input label="File input" prepend-icon="mdi-camera"></v-file-input>
+      <v-file-input
+        :rules="rules"
+        accept="image/png, image/jpeg, image/bmp"
+        placeholder="Upload a Profile Pic"
+        prepend-icon="mdi-camera"
+        label="Avatar"
+      ></v-file-input>
     </template>
   </v-card>
 </template>
@@ -28,6 +34,16 @@
 import { mapGetters, mapActions } from 'vuex';
 export default {
   computed: mapGetters(['user']),
+  data() {
+    return {
+      rules: [
+        value =>
+          !value ||
+          value.size < 1000000 ||
+          'Image size should be less than 1 MB!'
+      ]
+    };
+  },
   methods: {
     ...mapActions(['myProfile'])
   },
