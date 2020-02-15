@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Alcia Keys ",
+    "role": "Graphic Designer",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+    "experience": "newbie",
+    "image": "img/users/user-2.jpg",
+    "password": "2begood4",
+    "confirmPassword": "2begood4",
+    "email": "alicia@gmail.com"
+  },
+  {
+    "name": "Mercy John ",
+    "role": "Software Designer",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+    "experience": "intermediate",
+    "image": "img/users/user-3.jpg",
+    "password": "2begood4",
+    "confirmPassword": "2begood4",
+    "email": "mercy@gmail.com"
+  },
+  {
+    "name": "Abigail Pat ",
+    "role": "Software Tester",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+    "experience": "expert",
+    "image": "img/users/user-4.jpg",
+    "password": "2begood4",
+    "confirmPassword": "2begood4",
+    "email": "abigail@gmail.com"
+  },
+  {
+    "name": "Mark Twin ",
+    "role": "Graphic Designer",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+    "experience": "intermediate",
+    "image": "img/users/user-5.jpg",
+    "password": "2begood4",
+    "confirmPassword": "2begood4",
+    "email": "mark@gmail.com"
+  },
+  {
+    "name": "Mimi Doe ",
+    "role": "Software Designer",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+    "experience": "intermediate",
+    "image": "img/users/user-6.jpg",
+    "password": "2begood4",
+    "confirmPassword": "2begood4",
+    "email": "mimi@gmail.com"
+  },
+  {
+    "name": "Lescot John ",
+    "role": "Software Designer",
+    "bio": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy",
+    "experience": "intermediate",
+    "image": "img/users/user-9.jpg",
+    "password": "2begood4",
+    "confirmPassword": "2begood4",
+    "email": "letcot@gmail.com"
+  }
+]

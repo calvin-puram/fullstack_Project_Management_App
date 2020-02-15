@@ -1,0 +1,58 @@
+[
+  {
+    "title": "creating a logo for the page",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-04-09",
+    "remark": "Ongoing",
+    "user": "5e4555ed808ce11c589dcae7"
+  },
+  {
+    "title": "making web animation for the page",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-08-09",
+    "remark": "Ongoing",
+    "user": "5e4555ed808ce11c589dcae7"
+  },
+  {
+    "title": "setting .env for the page",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-02-09",
+    "remark": "Over-due",
+    "user": "5e4555ed808ce11c589dcae7"
+  },
+  {
+    "title": "puting a documentation form the api",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-06-09",
+    "remark": "complete",
+    "user": "5e4555ed808ce11c589dcaea"
+  },
+  {
+    "title": "over seeing some teams projects",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-01-20",
+    "remark": "Over-due",
+    "user": "5e4555ed808ce11c589dcaea"
+  },
+  {
+    "title": "making a task list",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-06-09",
+    "remark": "complete",
+    "user": "5e4555ed808ce11c589dcaea"
+  },
+  {
+    "title": "working on completing the app",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-10-09",
+    "remark": "complete",
+    "user": "5e4555ed808ce11c589dcae6"
+  },
+  {
+    "title": "expanding the api",
+    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less n",
+    "due": "2020-10-09",
+    "remark": "complete",
+    "user": "5e4555ed808ce11c589dcae8"
+  }
+]
