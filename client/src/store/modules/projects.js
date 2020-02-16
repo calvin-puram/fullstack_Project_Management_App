@@ -4,12 +4,16 @@ const state = {
   projects: [],
   error: null,
   loading: false,
-  userProject: []
+  userProject: [],
+  profileImage: null,
+  imageError: null
 };
 const getters = {
   getProjects: () => state.projects,
   isProjectLoading: () => state.loading,
-  userProject: () => state.userProject
+  userProject: () => state.userProject,
+  getProfilePic: () => state.profileImage,
+  geterror: () => state.error
 };
 const actions = {
   async projects({ commit }) {
@@ -71,6 +75,22 @@ const actions = {
       console.log(err.response);
       commit('projects_error', err.response);
     }
+  },
+  //// UPLOADS PROFILE IMAGE
+  async uploadedimage({ commit }, image) {
+    try {
+      commit('projects_req');
+      const res = await axios.patch(
+        `http://localhost:5000/api/v1/users/photo`,
+        image
+      );
+      if (res.data.success) {
+        commit('imageUploads_res', res.data.data);
+      }
+      return res;
+    } catch (err) {
+      commit('projects_error', err.response.data.error);
+    }
   }
 };
 const mutations = {
@@ -78,6 +98,7 @@ const mutations = {
     state.error = null;
     state.loading = true;
   },
+
   projects_error(state, err) {
     state.error = err;
     state.loading = false;
@@ -102,6 +123,11 @@ const mutations = {
     state.loading = false;
     state.projects = state.projects.filter(el => el._id !== id);
     state.userProject = state.userProject.filter(el => el._id !== id);
+  },
+  imageUploads_res(state, image) {
+    state.loading = false;
+    state.error = null;
+    state.profileImage = image;
   }
 };
 

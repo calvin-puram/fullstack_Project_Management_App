@@ -64,7 +64,7 @@
     <v-navigation-drawer app color="primary" v-model="drawer" v-if="isLoggedIn">
       <div class="d-flex flex-column align-center mt-5">
         <v-avatar>
-          <img :src="user.image" alt="profile" />
+          <img :src="`uploads/${user.image}`" alt="profile" />
         </v-avatar>
         <p class="subheading white--text mt-1">{{ user.name }}</p>
         
