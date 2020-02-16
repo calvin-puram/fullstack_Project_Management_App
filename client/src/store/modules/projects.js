@@ -35,8 +35,8 @@ const actions = {
       }
       return res;
     } catch (err) {
-      console.log(err.response);
-      commit('projects_error', err.response);
+      console.log(err.response.data.error);
+      commit('projects_error', err.response.data.error);
     }
   },
   //// CREATE PROJECTS

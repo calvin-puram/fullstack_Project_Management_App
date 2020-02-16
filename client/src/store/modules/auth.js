@@ -31,7 +31,7 @@ const actions = {
       }
       return res;
     } catch (err) {
-      console.log(err.response.error);
+      console.log(err.response);
       commit('login_error', err.response.error);
     }
   },

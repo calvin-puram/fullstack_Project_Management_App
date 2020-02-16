@@ -12,7 +12,7 @@ const sendToken = (user, res, statusCode) => {
   user.password = undefined;
   res.status(statusCode).json({
     success: true,
-    token: token
+    token: `Bearer ${token}`
   });
 };
 
