@@ -4,7 +4,7 @@
       <v-col cols="md-3 lg-4 sm-12" v-for="person in team" :key="person.name">
         <v-card class="text-center pa-4">
           <v-avatar size="100" tile class="my-5">
-            <img src="/img/default.jpg" max-width="60px" />
+            <img :src="`uploads/${person.image}`" max-width="60px" />
           </v-avatar>
 
           <p class="mt-4 font-weight-bold">{{ person.name }}</p>
@@ -28,7 +28,7 @@
 <script>
 import { mapActions, mapGetters } from 'vuex';
 export default {
-  computed: mapGetters(['team', 'isLoading']),
+  computed: mapGetters(['team', 'isLoading', 'user']),
   methods: {
     ...mapActions(['allUsers', 'myProfile'])
   },
