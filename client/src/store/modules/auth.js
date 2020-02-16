@@ -19,10 +19,7 @@ const actions = {
   async getLogin({ commit }, user) {
     try {
       commit('login_reg');
-      const res = await axios.post(
-        'http://localhost:5000/api/v1/auth/login',
-        user
-      );
+      const res = await axios.post('api/v1/auth/login', user);
       if (res.data.success) {
         const token = res.data.token;
         localStorage.setItem('token', JSON.stringify(token));
@@ -31,7 +28,6 @@ const actions = {
       }
       return res;
     } catch (err) {
-      console.log(err.response);
       commit('login_error', err.response.error);
     }
   },
@@ -39,10 +35,7 @@ const actions = {
   async register({ commit }, user) {
     try {
       commit('login_reg');
-      const res = await axios.post(
-        'http://localhost:5000/api/v1/auth/register',
-        user
-      );
+      const res = await axios.post('api/v1/auth/register', user);
       if (res.data.success) {
         const token = res.data.token;
         localStorage.setItem('token', JSON.stringify(token));
@@ -51,7 +44,6 @@ const actions = {
       }
       return res;
     } catch (err) {
-      console.log(err.response);
       commit('login_error', err.response);
     }
   },
@@ -66,7 +58,7 @@ const actions = {
   async myProfile({ commit }) {
     try {
       commit('login_reg');
-      const res = await axios('http://localhost:5000/api/v1/auth/profile');
+      const res = await axios('api/v1/auth/profile');
       if (res.data.success) {
         commit('profile_res', res.data.data);
       }
@@ -79,7 +71,7 @@ const actions = {
   async allUsers({ commit }) {
     try {
       commit('login_reg');
-      const res = await axios('http://localhost:5000/api/v1/users');
+      const res = await axios('api/v1/users');
       if (res.data.success) {
         commit('allUsers_res', res.data.data);
       }

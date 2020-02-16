@@ -19,13 +19,12 @@ const actions = {
   async projects({ commit }) {
     try {
       commit('projects_req');
-      const res = await axios('http://localhost:5000/api/v1/projects');
+      const res = await axios('api/v1/projects');
       if (res.data.success) {
         commit('projects_res', res.data.data);
       }
       return res;
     } catch (err) {
-      console.log(err.response);
       commit('projects_error', err.response);
     }
   },
@@ -33,13 +32,12 @@ const actions = {
   async myProjects({ commit }) {
     try {
       commit('projects_req');
-      const res = await axios('http://localhost:5000/api/v1/projects/me');
+      const res = await axios('api/v1/projects/me');
       if (res.data.success) {
         commit('personProjects_res', res.data.data);
       }
       return res;
     } catch (err) {
-      console.log(err.response.data.error);
       commit('projects_error', err.response.data.error);
     }
   },
@@ -47,16 +45,12 @@ const actions = {
   async createProjects({ commit }, data) {
     try {
       commit('projects_req');
-      const res = await axios.post(
-        'http://localhost:5000/api/v1/projects',
-        data
-      );
+      const res = await axios.post('api/v1/projects', data);
       if (res.data.success) {
         commit('newprojects_res', res.data.data);
       }
       return res;
     } catch (err) {
-      console.log(err.response);
       commit('projects_error', err.response);
     }
   },
@@ -64,15 +58,12 @@ const actions = {
   async deleteProjects({ commit }, id) {
     try {
       commit('projects_req');
-      const res = await axios.delete(
-        `http://localhost:5000/api/v1/projects/${id}`
-      );
+      const res = await axios.delete(`api/v1/projects/${id}`);
       if (res.data.success) {
         commit('deleted_res', id);
       }
       return res;
     } catch (err) {
-      console.log(err.response);
       commit('projects_error', err.response);
     }
   },
@@ -80,10 +71,7 @@ const actions = {
   async uploadedimage({ commit }, image) {
     try {
       commit('projects_req');
-      const res = await axios.patch(
-        `http://localhost:5000/api/v1/users/photo`,
-        image
-      );
+      const res = await axios.patch(`api/v1/users/photo`, image);
       if (res.data.success) {
         commit('imageUploads_res', res.data.data);
       }
